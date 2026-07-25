@@ -761,3 +761,79 @@
     }
 
 }
+.mobile-skills{
+
+    display:none;
+
+}
+@media (max-width:768px){
+
+    .orbit-container{
+
+        display:none;
+
+    }
+
+    .mobile-skills{
+
+        display:grid;
+
+        gap:20px;
+
+        width:100%;
+
+        margin-top:20px;
+
+    }
+
+    .skill-category{
+
+        background:rgba(255,255,255,.06);
+
+        backdrop-filter:blur(15px);
+
+        border:1px solid rgba(255,255,255,.1);
+
+        border-radius:20px;
+
+        padding:25px;
+
+    }
+
+    .skill-category h3{
+
+        color:#00BFFF;
+
+        margin-bottom:15px;
+
+        font-size:20px;
+
+    }
+
+    .skill-category ul{
+
+        list-style:none;
+
+        padding:0;
+
+    }
+
+    .skill-category li{
+
+        padding:10px 0;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+        color:#ddd;
+
+        font-size:16px;
+
+    }
+
+    .skill-category li:last-child{
+
+        border-bottom:none;
+
+    }
+
+}
