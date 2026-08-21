@@ -12,6 +12,9 @@
 
     color:white;
 
+    position: relative;
+
+    top: -180px;
 }
 
 .contact-header{

@@ -2,144 +2,502 @@
 
     <div class="skills-layout">
 
-        <!-- Left Panel -->
+        <!-- =========================================
+             LEFT PANEL
+        ========================================== -->
 
         <div class="left-panel">
 
-            <h2 class="tech-title">Tech Stack</h2>
+            <h2 class="tech-title">
+                Tech Stack
+            </h2>
 
             <p class="tech-desc">
                 Technologies I use to build modern,
-                scalable and high-performance web applications.
+                scalable and high-performance web
+                applications.
             </p>
+
+
+            <!-- =========================================
+                 FILTERS
+            ========================================== -->
 
             <div class="filters">
 
-                <button class="filter-btn all active" data-filter="all">
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="all"
+                >
                     All
                 </button>
 
-                <button class="filter-btn frontend" data-filter="frontend">
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="frontend"
+                >
                     Frontend
                 </button>
 
-                <button class="filter-btn backend" data-filter="backend">
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="backend"
+                >
                     Backend
                 </button>
 
-                <button class="filter-btn database" data-filter="database">
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="database"
+                >
                     Database
                 </button>
 
-                <button class="filter-btn tools" data-filter="tools">
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="ai"
+                >
+                    AI
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="languages"
+                >
+                    Languages
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="tools"
+                >
                     Tools
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="animation"
+                >
+                    Animation
                 </button>
 
             </div>
 
         </div>
 
-        <!-- Desktop Orbit -->
+
+        <!-- =========================================
+             DESKTOP ORBIT
+        ========================================== -->
 
         <div class="orbit-container">
 
-            <div class="orbit orbit1"></div>
-            <div class="orbit orbit2"></div>
-            <div class="orbit orbit3"></div>
-            <div class="orbit orbit4"></div>
+            <!-- Orbit Rings -->
 
-            
-            <!-- Frontend -->
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+            <div class="orbit orbit-4"></div>
+            <div class="orbit orbit-5"></div>
 
-            <div class="node frontend html">HTML</div>
-            <div class="node frontend css">CSS</div>
-            <div class="node frontend javascript">JavaScript</div>
-            <div class="node frontend react">React</div>
 
-            <!-- Backend -->
+            <!-- =====================================
+                 FRONTEND
+            ====================================== -->
 
-            <div class="node backend java">Java</div>
-            <div class="node backend nodejs">Node.js</div>
-            <div class="node backend express">Express</div>
+            <div
+                class="node frontend html"
+                data-category="frontend"
+            >
+                HTML5
+            </div>
 
-            <!-- Database -->
+            <div
+                class="node frontend css"
+                data-category="frontend"
+            >
+                CSS3
+            </div>
 
-            <div class="node database mysql">MySQL</div>
-            <div class="node database mongodb">MongoDB</div>
+            <div
+                class="node frontend javascript languages"
+                data-category="frontend"
+            >
+                JavaScript
+            </div>
 
-            <!-- Tools -->
+            <div
+                class="node frontend typescript languages"
+                data-category="frontend"
+            >
+                TypeScript
+            </div>
 
-            <div class="node tools git">Git</div>
-            <div class="node tools github">GitHub</div>
+            <div
+                class="node frontend react"
+                data-category="frontend"
+            >
+                React.js
+            </div>
+
+            <div
+                class="node frontend tailwind"
+                data-category="frontend"
+            >
+                Tailwind CSS
+            </div>
+
+            <div
+                class="node frontend vite"
+                data-category="frontend"
+            >
+                Vite
+            </div>
+
+
+            <!-- =====================================
+                 BACKEND
+            ====================================== -->
+
+            <div
+                class="node backend nodejs"
+                data-category="backend"
+            >
+                Node.js
+            </div>
+
+            <div
+                class="node backend express"
+                data-category="backend"
+            >
+                Express.js
+            </div>
+
+            <div
+                class="node backend rest"
+                data-category="backend"
+            >
+                REST APIs
+            </div>
+
+
+            <!-- =====================================
+                 DATABASE
+            ====================================== -->
+
+            <div
+                class="node database mongodb"
+                data-category="database"
+            >
+                MongoDB
+            </div>
+
+            <div
+                class="node database atlas"
+                data-category="database"
+            >
+                MongoDB Atlas
+            </div>
+
+            <div
+                class="node database mysql"
+                data-category="database"
+            >
+                MySQL
+            </div>
+
+            <div
+                class="node database postgres"
+                data-category="database"
+            >
+                PostgreSQL
+            </div>
+
+            <div
+                class="node database prisma"
+                data-category="database"
+            >
+                Prisma
+            </div>
+
+
+            <!-- =====================================
+                 AI
+            ====================================== -->
+
+            <div
+                class="node ai gemini"
+                data-category="ai"
+            >
+                Google Gemini API
+            </div>
+
+            <div
+                class="node ai llm"
+                data-category="ai"
+            >
+                AI / LLM
+            </div>
+
+            <div
+                class="node ai whisper"
+                data-category="ai"
+            >
+                Whisper / STT
+            </div>
+
+            <div
+                class="node ai tts"
+                data-category="ai"
+            >
+                Text-to-Speech
+            </div>
+
+
+            <!-- =====================================
+                 LANGUAGES
+            ====================================== -->
+
+            <div
+                class="node languages java"
+                data-category="languages"
+            >
+                Java
+            </div>
+
+            <div
+                class="node languages python"
+                data-category="languages"
+            >
+                Python
+            </div>
+
+
+            <!-- =====================================
+                 TOOLS
+            ====================================== -->
+
+            <div
+                class="node tools git"
+                data-category="tools"
+            >
+                Git
+            </div>
+
+            <div
+                class="node tools github"
+                data-category="tools"
+            >
+                GitHub
+            </div>
+
+            <div
+                class="node tools postman"
+                data-category="tools"
+            >
+                Postman
+            </div>
+
+            <div
+                class="node tools docker"
+                data-category="tools"
+            >
+                Docker
+            </div>
+
+            <div
+                class="node tools compose"
+                data-category="tools"
+            >
+                Docker Compose
+            </div>
+
+            <div
+                class="node tools vscode"
+                data-category="tools"
+            >
+                VS Code
+            </div>
+
+
+            <!-- =====================================
+                 ANIMATION
+            ====================================== -->
+
+            <div
+                class="node animation framer"
+                data-category="animation"
+            >
+                Framer Motion
+            </div>
+
+            <div
+                class="node animation gsap"
+                data-category="animation"
+            >
+                GSAP
+            </div>
+
+            <div
+                class="node animation lenis"
+                data-category="animation"
+            >
+                Lenis
+            </div>
+
+            <div
+                class="node animation three"
+                data-category="animation"
+            >
+                Three.js
+            </div>
+
+            <div
+                class="node animation r3f"
+                data-category="animation"
+            >
+                React Three Fiber
+            </div>
+
+            <div
+                class="node animation drei"
+                data-category="animation"
+            >
+                React Three Drei
+            </div>
 
         </div>
 
-        <!-- Mobile Skills -->
+
+        <!-- =========================================
+             MOBILE SKILLS
+        ========================================== -->
 
         <div class="mobile-skills">
+
+
+            <!-- Frontend -->
 
             <div class="skill-category">
 
                 <h3>🌐 Frontend</h3>
 
                 <ul>
-
                     <li>HTML5</li>
-
                     <li>CSS3</li>
-
                     <li>JavaScript</li>
-
+                    <li>TypeScript</li>
                     <li>React.js</li>
-
+                    <li>Tailwind CSS</li>
+                    <li>Vite</li>
                 </ul>
 
             </div>
+
+
+            <!-- Backend -->
 
             <div class="skill-category">
 
                 <h3>⚙️ Backend</h3>
 
                 <ul>
-
-                    <li>Java</li>
-
                     <li>Node.js</li>
-
                     <li>Express.js</li>
-
+                    <li>REST APIs</li>
                 </ul>
 
             </div>
+
+
+            <!-- Database -->
 
             <div class="skill-category">
 
                 <h3>🗄️ Database</h3>
 
                 <ul>
-
-                    <li>MySQL</li>
-
                     <li>MongoDB</li>
-
+                    <li>MongoDB Atlas</li>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>Prisma</li>
                 </ul>
 
             </div>
+
+
+            <!-- AI -->
+
+            <div class="skill-category">
+
+                <h3>🤖 AI</h3>
+
+                <ul>
+                    <li>Google Gemini API</li>
+                    <li>AI / LLM Integration</li>
+                    <li>Whisper / Speech-to-Text</li>
+                    <li>Text-to-Speech</li>
+                </ul>
+
+            </div>
+
+
+            <!-- Languages -->
+
+            <div class="skill-category">
+
+                <h3>💻 Languages</h3>
+
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                </ul>
+
+            </div>
+
+
+            <!-- Tools -->
 
             <div class="skill-category">
 
                 <h3>🛠️ Tools</h3>
 
                 <ul>
-
                     <li>Git</li>
-
                     <li>GitHub</li>
-
-                    <li>VS Code</li>
-
                     <li>Postman</li>
+                    <li>Docker</li>
+                    <li>Docker Compose</li>
+                    <li>VS Code</li>
+                </ul>
 
+            </div>
+
+
+            <!-- Animation -->
+
+            <div class="skill-category">
+
+                <h3>✨ Animation</h3>
+
+                <ul>
+                    <li>Framer Motion</li>
+                    <li>GSAP</li>
+                    <li>Lenis</li>
+                    <li>Three.js</li>
+                    <li>React Three Fiber</li>
+                    <li>React Three Drei</li>
                 </ul>
 
             </div>

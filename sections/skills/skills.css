@@ -1,839 +1,1067 @@
-.skills{
+/* =========================================================
+   SKILLS SECTION
+========================================================= */
 
-    min-height:100vh;
+.skills {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
 
-    padding:120px 5%;
+    padding: 120px 4% 100px;
 
-    color:white;
+    box-sizing: border-box;
 
-    text-align:center;
-    max-width:1400px;
-    margin:auto;
+    overflow: hidden;
+
+    color: #ffffff;
 }
 
-.skills-title{
 
-    font-size:3rem;
+/* =========================================================
+   MAIN SKILLS LAYOUT
+========================================================= */
 
-    margin-bottom:40px;
+.skills-layout {
+    position: relative;
 
-    color:#ffffff;
-}
+    width: min(1500px, 96%);
+    min-height: 820px;
 
-.skills-layout{
+    margin: 30px auto 0;
 
-    width:95%;
-    max-width:1600px;
+    padding: 45px;
 
-    margin:50px auto;
+    display: flex;
+    align-items: center;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    gap: 65px;
 
-    gap:80px;
+    box-sizing: border-box;
 
-    padding:60px;
+    border-radius: 35px;
 
-    border-radius:40px;
+    background: rgba(7, 18, 42, 0.38);
 
-    background:rgba(18,25,45,.15);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 
-    backdrop-filter:blur(0px);
-
-    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     box-shadow:
-        0 0 40px rgba(0,0,0,.35),
-        inset 0 0 15px rgba(255,255,255,.03);
+        0 0 40px rgba(0, 0, 0, 0.25),
+        inset 0 0 35px rgba(255, 255, 255, 0.02);
 
-    position:relative;
-
-    overflow:hidden;
-
+    overflow: hidden;
 }
 
-.skills-layout::before{
 
-    content:"";
+/* =========================================================
+   GRADIENT BORDER
+========================================================= */
 
-    position:absolute;
+.skills-layout::before {
+    content: "";
 
-    inset:0;
+    position: absolute;
 
-    border-radius:40px;
+    inset: 0;
 
-    padding:1px;
+    padding: 1px;
 
-    background:linear-gradient(
-        135deg,
-        rgba(0,191,255,.35),
-        transparent,
-        rgba(123,77,255,.35)
-    );
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 191, 255, 0.55),
+            transparent 30%,
+            transparent 70%,
+            rgba(123, 77, 255, 0.45)
+        );
 
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
 
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 
-    pointer-events:none;
+    pointer-events: none;
 
+    z-index: 1;
 }
 
 
-.filters{
+/* =========================================================
+   LEFT PANEL
+========================================================= */
 
-    display:flex;
+.left-panel {
+    position: relative;
 
-    flex-direction:column;
+    z-index: 50;
 
-    gap:18px;
+    width: 280px;
+    min-width: 280px;
 
-    width:180px;
+    padding: 40px 28px;
 
-    align-items:stretch;
+    box-sizing: border-box;
 
-}
-.filters button{
+    border-radius: 25px;
 
-    padding:12px 24px;
+    background:
+        rgba(255, 255, 255, 0.045);
 
-    border:none;
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
 
-    border-radius:50px;
-
-    cursor:pointer;
-
-    color:white;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.12);
-
-    transition:.35s;
-}
-.filter-btn{
-
-    width:100%;
-
-    padding:14px 20px;
-
-    border-radius:14px;
-
-    text-align:left;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-}
-
-
-.filter-btn.all:hover,
-.filter-btn.all.active{
-
-    background:#00d9ff;
-
-    color:black;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
     box-shadow:
-        0 0 15px #00d9ff,
-        0 0 35px #00d9ff;
-
+        0 10px 35px rgba(0, 0, 0, 0.20);
 }
 
 
+/* =========================================================
+   TECH TITLE
+========================================================= */
 
-.filter-btn.frontend:hover,
-.filter-btn.frontend.active{
-    background:#3b82f6;
-    color:white;
-    border-color:#3b82f6;
-    box-shadow:
-        0 0 15px #3b82f6,
-        0 0 35px rgba(59,130,246,.8);
-}
+.tech-title {
+    margin: 0 0 22px;
 
-.frontend-active{
+    text-align: center;
 
-    background:#2563eb;
-    color:white;
-    border-color:#2563eb;
+    font-size: 3rem;
 
-    box-shadow:
-        0 0 15px #2563eb,
-        0 0 35px #2563eb;
+    line-height: 1.05;
 
-}
+    font-weight: 800;
 
-.filter-btn.backend:hover,
-.filter-btn.backend.active{
+    color: #ffffff;
 
-    background:#22c55e;
-
-    box-shadow:
-        0 0 15px #22c55e,
-        0 0 40px #22c55e;
-
-}
-
-
-.backend-active{
-
-    background:#22c55e;
-
-    color:white;
-
-    border-color:#22c55e;
-
-    box-shadow:
-        0 0 15px #22c55e,
-        0 0 35px #22c55e;
-
-}
-
-
-.filter-btn.database:hover,
-.filter-btn.database.active{
-
-    background:#a855f7;
-
-    box-shadow:
-        0 0 15px #a855f7,
-        0 0 40px #a855f7;
-
-}
-
-.database-active{
-
-    background:#9333ea;
-
-    color:white;
-
-    border-color:#9333ea;
-
-    box-shadow:
-        0 0 15px #9333ea,
-        0 0 35px #9333ea;
-
-}
-
-.filter-btn.tools:hover,
-.filter-btn.tools.active{
-
-    background:#f97316;
-
-    box-shadow:
-        0 0 15px #f97316,
-        0 0 40px #f97316;
-
-}
-.frontend-theme .node.frontend{
-    background:#3b82f6;
-    border-color:#3b82f6;
-    box-shadow:0 0 20px #3b82f6;
-}
-
-.backend-theme .node.backend{
-    background:#22c55e;
-    border-color:#22c55e;
-    box-shadow:0 0 20px #22c55e;
-}
-
-.database-theme .node.database{
-    background:#a855f7;
-    border-color:#a855f7;
-    box-shadow:0 0 20px #a855f7;
-}
-
-.tools-theme .node.tools{
-    background:#f97316;
-    border-color:#f97316;
-    box-shadow:0 0 20px #f97316;
-}
-
-.tools-active{
-
-    background:#f97316;
-
-    color:white;
-
-    border-color:#f97316;
-
-    box-shadow:
-        0 0 15px #f97316,
-        0 0 35px #f97316;
-
-}
-
-
-
-.orbit-container{
-
-    position:relative;
-
-    width:750px;
-
-    height:750px;
-
-    flex-shrink:0;
-    top: -60px;
-
-}
-
-.orbit{
-
-    position:absolute;
-
-    border:1px dashed rgba(0,191,255,.15);
-
-    border-radius:50%;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-50%);
-}
-
-.orbit1{
-
-    width:180px;
-    height:180px;
-}
-
-.orbit2{
-
-    width:300px;
-    height:300px;
-}
-
-.orbit3{
-
-    width:450px;
-    height:450px;
-}
-
-.orbit4{
-
-    width:620px;
-    height:620px;
-}
-
-.core{
-
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:80px;
-    height:80px;
-
-    border-radius:50%;
-
-    background:radial-gradient(circle,#00ffff,#7b4dff);
-
-    box-shadow:
-        0 0 30px #00ffff,
-        0 0 80px #7b4dff;
-}
-
-.node{
-
-    position:absolute;
-
-    width:80px;
-    height:80px;
-
-    border-radius:50%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:rgba(0,191,255,.15);
-
-    border:2px solid #00BFFF;
-
-    color:white;
-
-    font-size:13px;
-
-    text-align:center;
-
-    box-shadow:
-        0 0 15px #00BFFF;
-
-     transition:
-        opacity .4s ease,
-        transform .4s ease;
-}
-
-.node.hide{
-
-    opacity:0;
-
-    transform:scale(.5);
-
-    pointer-events:none;
-
-}
-
-
-.node:hover{
-
-    transform:scale(1.15);
-
-    box-shadow:
-        0 0 30px #00BFFF,
-        0 0 60px #00BFFF;
-
-}
-.html{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(0deg)
-        translateY(-310px)
-        rotate(0deg);
-}
-
-.css{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(45deg)
-        translateY(-310px)
-        rotate(-45deg);
-}
-
-.javascript{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(90deg)
-        translateY(-310px)
-        rotate(-90deg);
-}
-
-.react{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(135deg)
-        translateY(-310px)
-        rotate(-135deg);
-}
-
-.java{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(180deg)
-        translateY(-310px)
-        rotate(-180deg);
-}
-
-.nodejs{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(225deg)
-        translateY(-310px)
-        rotate(-225deg);
-}
-
-.express{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(270deg)
-        translateY(-310px)
-        rotate(-270deg);
-}
-
-.mysql{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(315deg)
-        translateY(-220px)
-        rotate(-315deg);
-}
-
-.mongodb{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(135deg)
-        translateY(-220px)
-        rotate(-135deg);
-}
-
-.git{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(45deg)
-        translateY(-130px)
-        rotate(-45deg);
-}
-
-.github{
-    top:50%;
-    left:50%;
-    transform:
-        translate(-50%,-50%)
-        rotate(225deg)
-        translateY(-130px)
-        rotate(-225deg);
-}
-
-@media (max-width:1100px){
-
-    .skills-layout{
-
-        flex-direction:column;
-
-        gap:50px;
-
-    }
-
-    .filters{
-
-        flex-direction:row;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        width:100%;
-
-    }
-
-    .filter-btn{
-
-        width:auto;
-
-        min-width:140px;
-
-        text-align:center;
-
-    }
-
-}
-.title-wrapper{
-
-    display:inline-flex;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:14px 40px;
-
-    margin-bottom:60px;
-
-    border-radius:60px;
-
-    position:relative;
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    backdrop-filter:blur(0px);
-
-    overflow:hidden;
-}
-
-.left-panel{
-
-    width:280px;
-
-    padding:35px;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,.05);
-
-    backdrop-filter:blur(0px);
-
-    border:1px solid rgba(255,255,255,.12);
-
-}
-
-.tech-title{
-
-    font-size:3rem;
-
-    color:white;
-
-    margin-bottom:20px;
+    letter-spacing: -1px;
 
     text-shadow:
-        0 0 15px #00BFFF;
-
+        0 0 10px rgba(0, 191, 255, 0.85),
+        0 0 25px rgba(0, 191, 255, 0.40);
 }
-.tech-desc{
 
-    color:#d7e6ff;
 
-    line-height:1.7;
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
-    margin-bottom:35px;
+.tech-desc {
+    width: 100%;
 
-    opacity:.8;
+    max-width: 225px;
 
+    margin: 0 auto 32px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.76);
+
+    font-size: 14px;
+
+    line-height: 1.8;
 }
-@media (max-width:992px){
 
-    .skills{
 
-        padding:90px 40px;
+/* =========================================================
+   FILTERS
+========================================================= */
 
-    }
+.filters {
+    display: flex;
 
-    .skills-layout{
+    flex-direction: column;
 
-        flex-direction:column;
+    gap: 11px;
 
-        gap:60px;
-
-        text-align:center;
-
-    }
-
-    .left-panel{
-
-        width:100%;
-
-        max-width:700px;
-
-    }
-
-    .filters{
-
-        justify-content:center;
-
-        flex-wrap:wrap;
-
-        gap:15px;
-
-    }
-
-    .orbit-container{
-
-        transform:scale(.9);
-
-    }
-
+    width: 100%;
 }
-@media (max-width:768px){
 
-    .skills{
 
-        padding:80px 20px;
+/* =========================================================
+   FILTER BUTTON
+========================================================= */
 
-    }
+.filter-btn {
+    width: 100%;
 
-    .tech-title{
+    min-height: 42px;
 
-        font-size:2.3rem;
+    padding: 11px 15px;
 
-    }
+    box-sizing: border-box;
 
-    .tech-desc{
+    border-radius: 50px;
 
-        font-size:16px;
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
 
-    }
+    background:
+        rgba(255, 255, 255, 0.055);
 
-    .skills-layout{
+    color: #ffffff;
 
-        gap:50px;
+    font-family: inherit;
 
-    }
+    font-size: 13px;
 
-    .filters{
+    font-weight: 600;
 
-        display:flex;
+    cursor: pointer;
 
-        justify-content:center;
-
-        flex-wrap:wrap;
-
-        gap:12px;
-
-    }
-
-    .filter-btn{
-
-        padding:10px 18px;
-
-        font-size:14px;
-
-    }
-
-    .orbit-container{
-
-        transform:scale(.75);
-
-        width:100%;
-
-        overflow:hidden;
-
-    }
-
-    .node{
-
-        width:70px;
-
-        height:70px;
-
-        font-size:13px;
-
-    }
-
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
-@media (max-width:480px){
 
-    .skills{
 
-        padding:60px 15px;
+.filter-btn:hover {
+    transform: translateY(-2px);
 
-    }
+    background:
+        rgba(0, 191, 255, 0.12);
 
-    .tech-title{
-
-        font-size:2rem;
-
-    }
-
-    .tech-desc{
-
-        font-size:15px;
-
-    }
-
-    .orbit-container{
-
-        transform:scale(.6);
-
-    }
-
-    .filters{
-
-        gap:10px;
-
-    }
-
-    .filter-btn{
-
-        padding:8px 14px;
-
-        font-size:13px;
-
-    }
-
-    .node{
-
-        width:60px;
-
-        height:60px;
-
-        font-size:12px;
-
-    }
-
+    border-color:
+        rgba(0, 191, 255, 0.45);
 }
-.mobile-skills{
 
-    display:none;
 
+.filter-btn.active {
+    color: #001018;
+
+    background: #00cfff;
+
+    border-color: #00cfff;
+
+    box-shadow:
+        0 0 18px rgba(0, 207, 255, 0.75),
+        0 0 38px rgba(0, 207, 255, 0.20);
 }
-@media (max-width:768px){
 
-    .orbit-container{
 
-        display:none;
+/* =========================================================
+   ORBIT CONTAINER
+========================================================= */
 
+.orbit-container {
+    position: relative;
+
+    flex: 1;
+
+    width: 850px;
+    height: 850px;
+
+    min-width: 0;
+
+    margin-left: auto;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   ORBIT RINGS
+
+   Supports both:
+   orbit1
+   orbit2
+   orbit3
+   orbit4
+
+   and:
+   orbit-1
+   orbit-2
+   orbit-3
+   orbit-4
+========================================================= */
+
+.orbit {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border:
+        1px dashed rgba(0, 191, 255, 0.18);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   ORBIT 1
+========================================================= */
+
+.orbit1,
+.orbit-1 {
+    width: 210px;
+    height: 210px;
+}
+
+
+/* =========================================================
+   ORBIT 2
+========================================================= */
+
+.orbit2,
+.orbit-2 {
+    width: 350px;
+    height: 350px;
+}
+
+
+/* =========================================================
+   ORBIT 3
+========================================================= */
+
+.orbit3,
+.orbit-3 {
+    width: 500px;
+    height: 500px;
+}
+
+
+/* =========================================================
+   ORBIT 4
+========================================================= */
+
+.orbit4,
+.orbit-4 {
+    width: 650px;
+    height: 650px;
+}
+
+
+/* =========================================================
+   CENTER GLOW
+========================================================= */
+
+.orbit-container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 170px;
+    height: 170px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 191, 255, 0.14),
+            transparent 70%
+        );
+
+    filter: blur(18px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   SKILL NODE
+
+   IMPORTANT:
+   JavaScript controls:
+
+   --angle
+   --radius
+
+   DO NOT create individual positioning rules for:
+   .html
+   .css
+   .react
+   .java
+   .mongodb
+   etc.
+========================================================= */
+
+.node {
+    --angle: 0deg;
+    --radius: 100px;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 84px;
+    height: 84px;
+
+    padding: 9px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    text-align: center;
+
+    /* =====================================================
+       TEXT
+    ===================================================== */
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.15px;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.7);
+
+    word-break: normal;
+
+    overflow-wrap: anywhere;
+
+
+    /* =====================================================
+       GLASS
+    ===================================================== */
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 191, 255, 0.14),
+            rgba(255, 255, 255, 0.045)
+        );
+
+    border:
+        1.5px solid rgba(0, 207, 255, 0.85);
+
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+
+
+    /* =====================================================
+       GLOW
+    ===================================================== */
+
+    box-shadow:
+        0 0 10px rgba(0, 191, 255, 0.55),
+        0 0 22px rgba(0, 191, 255, 0.20);
+
+
+    /* =====================================================
+       POSITION
+
+       JavaScript controls angle and radius.
+    ===================================================== */
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--angle))
+        translateY(calc(var(--radius) * -1))
+        rotate(calc(var(--angle) * -1));
+
+
+    /* =====================================================
+       TRANSITION
+    ===================================================== */
+
+    transition:
+        transform 0.6s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        text-shadow 0.3s ease;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   SKILL NODE HOVER
+========================================================= */
+
+.node:hover {
+    z-index: 100;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 207, 255, 0.32),
+            rgba(255, 255, 255, 0.10)
+        );
+
+    border-color:
+        #00e1ff;
+
+    box-shadow:
+        0 0 15px rgba(0, 207, 255, 0.95),
+        0 0 35px rgba(0, 207, 255, 0.55),
+        0 0 60px rgba(0, 207, 255, 0.20);
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.9);
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--angle))
+        translateY(calc(var(--radius) * -1))
+        rotate(calc(var(--angle) * -1))
+        scale(1.12);
+}
+
+
+/* =========================================================
+   LONG SKILL NAMES
+========================================================= */
+
+.node.ai {
+    font-size: 12px;
+}
+
+
+.node.animation {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CATEGORY THEMES
+========================================================= */
+
+
+/* FRONTEND */
+
+.frontend-theme .frontend {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 15px rgba(59, 130, 246, 0.75);
+}
+
+
+/* BACKEND */
+
+.backend-theme .backend {
+    border-color: #22c55e;
+
+    box-shadow:
+        0 0 15px rgba(34, 197, 94, 0.75);
+}
+
+
+/* DATABASE */
+
+.database-theme .database {
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.75);
+}
+
+
+/* AI */
+
+.ai-theme .ai {
+    border-color: #ec4899;
+
+    box-shadow:
+        0 0 15px rgba(236, 72, 153, 0.80);
+}
+
+
+/* LANGUAGES */
+
+.languages-theme .languages {
+    border-color: #06b6d4;
+
+    box-shadow:
+        0 0 15px rgba(6, 182, 212, 0.80);
+}
+
+
+/* TOOLS */
+
+.tools-theme .tools {
+    border-color: #f97316;
+
+    box-shadow:
+        0 0 15px rgba(249, 115, 22, 0.80);
+}
+
+
+/* ANIMATION */
+
+.animation-theme .animation {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 15px rgba(139, 92, 246, 0.80);
+}
+
+
+/* =========================================================
+   HIDDEN NODES
+========================================================= */
+
+.node.hide {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.3);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   MOBILE SKILLS
+========================================================= */
+
+.mobile-skills {
+    display: none;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1350px) {
+
+    .skills-layout {
+        width: 96%;
+
+        gap: 40px;
+
+        padding: 40px;
     }
 
-    .mobile-skills{
 
-        display:grid;
-
-        gap:20px;
-
-        width:100%;
-
-        margin-top:20px;
-
+    .orbit-container {
+        width: 760px;
+        height: 760px;
     }
 
-    .skill-category{
 
-        background:rgba(255,255,255,.06);
-
-        backdrop-filter:blur(15px);
-
-        border:1px solid rgba(255,255,255,.1);
-
-        border-radius:20px;
-
-        padding:25px;
-
+    .orbit1,
+    .orbit-1 {
+        width: 190px;
+        height: 190px;
     }
 
-    .skill-category h3{
 
-        color:#00BFFF;
-
-        margin-bottom:15px;
-
-        font-size:20px;
-
+    .orbit2,
+    .orbit-2 {
+        width: 320px;
+        height: 320px;
     }
 
-    .skill-category ul{
 
-        list-style:none;
-
-        padding:0;
-
+    .orbit3,
+    .orbit-3 {
+        width: 450px;
+        height: 450px;
     }
 
-    .skill-category li{
 
-        padding:10px 0;
-
-        border-bottom:1px solid rgba(255,255,255,.08);
-
-        color:#ddd;
-
-        font-size:16px;
-
+    .orbit4,
+    .orbit-4 {
+        width: 590px;
+        height: 590px;
     }
 
-    .skill-category li:last-child{
 
-        border-bottom:none;
+    .node {
+        width: 80px;
+        height: 80px;
 
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .skills {
+        padding:
+            100px 25px 80px;
     }
 
+
+    .skills-layout {
+        flex-direction: column;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding:
+            35px 25px;
+
+        gap: 30px;
+    }
+
+
+    .left-panel {
+        width:
+            min(100%, 500px);
+
+        min-width: 0;
+
+        margin: 0 auto;
+    }
+
+
+    .filters {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .orbit-container {
+        width: 850px;
+        height: 850px;
+
+        flex: none;
+
+        margin:
+            -60px auto
+            -60px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .skills {
+        padding:
+            80px 15px 60px;
+    }
+
+
+    .skills-layout {
+        width: 100%;
+
+        padding:
+            25px 15px;
+
+        border-radius: 28px;
+
+        gap: 25px;
+    }
+
+
+    .left-panel {
+        width: 100%;
+
+        padding:
+            30px 20px;
+
+        border-radius: 22px;
+    }
+
+
+    .tech-title {
+        font-size:
+            2.4rem;
+    }
+
+
+    .tech-desc {
+        font-size:
+            13px;
+    }
+
+
+    /* Hide desktop orbit */
+
+    .orbit-container {
+        display: none;
+    }
+
+
+    /* =====================================================
+       MOBILE SKILL CARDS
+    ===================================================== */
+
+    .mobile-skills {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+    }
+
+
+    .skill-category {
+        padding: 22px;
+
+        border-radius: 20px;
+
+        background:
+            rgba(255, 255, 255, 0.045);
+
+        border:
+            1px solid rgba(255, 255, 255, 0.10);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            background 0.3s ease;
+    }
+
+
+    .skill-category:hover {
+        transform:
+            translateY(-4px);
+
+        background:
+            rgba(255, 255, 255, 0.07);
+
+        border-color:
+            rgba(0, 191, 255, 0.35);
+    }
+
+
+    .skill-category h3 {
+        margin:
+            0 0 15px;
+
+        color:
+            #00cfff;
+
+        font-size:
+            18px;
+
+        font-weight:
+            700;
+    }
+
+
+    .skill-category ul {
+        margin: 0;
+
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    .skill-category li {
+        padding:
+            9px 0;
+
+        color:
+            rgba(255, 255, 255, 0.82);
+
+        font-size:
+            14px;
+
+        font-weight:
+            500;
+
+        border-bottom:
+            1px solid
+            rgba(255, 255, 255, 0.07);
+    }
+
+
+    .skill-category li:last-child {
+        border-bottom: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .skills {
+        padding:
+            70px 10px 50px;
+    }
+
+
+    .skills-layout {
+        padding:
+            20px 12px;
+
+        border-radius:
+            24px;
+    }
+
+
+    .left-panel {
+        padding:
+            25px 15px;
+    }
+
+
+    .tech-title {
+        font-size:
+            2rem;
+    }
+
+
+    .tech-desc {
+        font-size:
+            12px;
+    }
+
+
+    .filters {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .filter-btn {
+        min-height:
+            40px;
+
+        padding:
+            9px 8px;
+
+        font-size:
+            12px;
+    }
+
+
+    .skill-category {
+        padding:
+            18px;
+    }
+
+
+    .skill-category h3 {
+        font-size:
+            17px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA READABILITY
+========================================================= */
+
+/*
+   These prevent old CSS rules from changing the
+   individual skill positions.
+
+   JavaScript is the ONLY thing that should control
+   --angle and --radius.
+*/
+
+.node.html,
+.node.css,
+.node.javascript,
+.node.typescript,
+.node.react,
+.node.tailwind,
+.node.vite,
+.node.nodejs,
+.node.express,
+.node.rest,
+.node.mongodb,
+.node.mongodb-atlas,
+.node.mysql,
+.node.postgresql,
+.node.prisma,
+.node.gemini,
+.node.ai-llm,
+.node.whisper,
+.node.tts,
+.node.java,
+.node.python,
+.node.git,
+.node.github,
+.node.postman,
+.node.docker,
+.node.docker-compose,
+.node.vscode,
+.node.framer,
+.node.gsap,
+.node.lenis,
+.node.three,
+.node.react-three-fiber,
+.node.react-three-drei {
+    position: absolute;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .node,
+    .filter-btn,
+    .skill-category {
+        transition: none;
+    }
 }
