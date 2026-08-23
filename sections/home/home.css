@@ -156,7 +156,7 @@ body{
     transform-origin: center center;
     animation:
         fadeIn 5s ease forwards,
-        galaxy 200s linear infinite;
+        galaxy 400s linear infinite;
 }
 @keyframes fadeIn{
     from{
